@@ -1,0 +1,62 @@
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+  font-family: "Inter", sans-serif;
+  background-color: $veryDarkBlue;
+  height: 100vh;
+
+  @include breakpoint-down(lg) {
+    height: 110vh;
+  }
+}
+
+main {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  max-width: 326px;
+  margin: 0px auto;
+
+  @include breakpoint-up(lg) {
+    max-width: 900px;
+  }
+
+  @include breakpoint-up(xl) {
+    max-width: 1110px;
+  }
+}
+
+.p-all {
+  padding: 38px 35px 34px;
+
+  @include breakpoint-up(lg) {
+    order: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 50px;
+    padding-right: 80px;
+  }
+}
