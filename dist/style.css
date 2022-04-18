@@ -113,14 +113,14 @@ main {
 .card__image div {
   position: relative;
   height: 242px;
-  background-image: url(./../../images/image-header-mobile.jpg);
+  background-image: url("./../../images/image-header-mobile.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 @media (min-width: 992px) {
   .card__image div {
-    background-image: url(./../../images/image-header-desktop.jpg);
+    background-image: url("./../../images/image-header-desktop.jpg");
     height: 440px;
   }
 }
