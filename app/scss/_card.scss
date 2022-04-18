@@ -1,0 +1,84 @@
+.card {
+  background-color: $darkDesaturatedBlue;
+  text-align: center;
+  color: $white;
+  border-radius: 10px;
+  overflow: hidden;
+
+  @include breakpoint-up(lg) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    text-align: left;
+    //grid-auto-flow: dense;
+  }
+
+  &__image {
+    @include breakpoint-up(lg) {
+      order: 2;
+    }
+    div {
+      position: relative;
+      height: 242px;
+      background-image: url(./../../images/image-header-mobile.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+
+      @include breakpoint-up(lg) {
+        background-image: url(./../../images/image-header-desktop.jpg);
+        height: 440px;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        background-color: rgba($softViolet, 0.6);
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
+    }
+  }
+  &__title {
+    font-size: 25px;
+    line-height: 1.3;
+    margin-bottom: 16px;
+    @include breakpoint-up(xl) {
+      font-size: 33px;
+    }
+
+    span {
+      color: $softViolet;
+    }
+  }
+
+  &__description {
+    font-family: "Lexend Deca", sans-serif;
+    color: $slightlyWhiteParagraph;
+    line-height: 1.5;
+    margin-bottom: 34px;
+  }
+
+  &__stats {
+    @include breakpoint-up(lg) {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+    div {
+      h2 {
+        font-size: 18px;
+        color: $white;
+        margin-bottom: 4px;
+      }
+
+      p {
+        font-family: "Lexend Deca", sans-serif;
+        color: $slightlyWhiteHeading;
+        text-transform: uppercase;
+      }
+      &:not(:last-child) {
+        margin-bottom: 26px;
+      }
+    }
+  }
+}
